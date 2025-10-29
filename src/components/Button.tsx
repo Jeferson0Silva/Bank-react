@@ -1,13 +1,14 @@
 import { Button } from "@chakra-ui/react"
+import { MouseEventHandler } from "react"
 
-interface loginProps {
-    event: () => void
+interface IDButton {
+    onClick: MouseEventHandler
 }
 
-export const CButton = ({ event }: loginProps) => {
+export const CButton = ({ onClick }: IDButton) => {
     return (
         <Button
-            onClick={event}
+            onClick={onClick}
             bg="purple.500"
             color="white"
             _hover={{ bg: "purple.600" }}
